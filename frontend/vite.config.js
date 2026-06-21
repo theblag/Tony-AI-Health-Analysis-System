@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/Tony-AI-Health-Analysis-Syustem/',
+  base: '/Tony-AI-Health-Analysis-System/',
   plugins: [
     react(),
     tailwindcss(),
