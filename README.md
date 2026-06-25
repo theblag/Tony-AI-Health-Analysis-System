@@ -1,4 +1,13 @@
-# Heart AI System 🫀
+<div align="center">
+  <img src="https://gssoc.girlscript.tech/images/favicon/favicon.ico" alt="GSSoC Logo" width="50"/>
+  <h1>Heart AI System 🫀</h1>
+  <h3>✨ Proudly participating in GirlScript Summer of Code (GSSoC) 2026! ✨</h3>
+  <p>
+    <a href="https://gssoc.girlscript.tech/"><img src="https://img.shields.io/badge/GSSoC-2026-F97316?style=for-the-badge&logo=github&logoColor=white" alt="GSSoC 2026"/></a>
+    <a href="https://gssoc.girlscript.tech/"><img src="https://img.shields.io/badge/Project_Admin-GSSoC'26-0284C7?style=for-the-badge" alt="Project Admin"/></a>
+    <a href="https://gssoc.girlscript.tech/"><img src="https://img.shields.io/badge/AI_Agents-Track-8B5CF6?style=for-the-badge" alt="AI Agents Track"/></a>
+  </p>
+</div>
 
 Welcome to the **Heart AI System** repository! This project leverages Artificial Intelligence to analyze health data and provide insights related to heart conditions.
 
