@@ -5,15 +5,11 @@ from io import BytesIO
 from pydantic import BaseModel
 import json
 
-# Configure Gemini — HEALTH_AI_API must be set in Render's environment variables.
-# The server will raise a clear error at startup if the key is missing.
+# Configure Gemini if the API key is available.
+# The key is checked at request time so a missing key won't crash startup.
 _gemini_api_key = os.getenv("HEALTH_AI_API")
-if not _gemini_api_key:
-    raise RuntimeError(
-        "HEALTH_AI_API environment variable is not set. "
-        "Go to Render Dashboard → your service → Environment and add HEALTH_AI_API with your Gemini API key."
-    )
-genai.configure(api_key=_gemini_api_key)
+if _gemini_api_key:
+    genai.configure(api_key=_gemini_api_key)
 
 # Define the expected JSON structure using a Pydantic-like approach for prompt instructions
 system_instruction = """

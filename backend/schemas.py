@@ -14,7 +14,7 @@ class User(UserBase):
     created_at: datetime
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class ReportBase(BaseModel):
     pdf_filename: Optional[str] = None
@@ -35,4 +35,4 @@ class Report(ReportBase):
     timestamp: datetime
 
     class Config:
-        orm_mode = True
+        from_attributes = True
