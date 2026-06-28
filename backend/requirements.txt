@@ -1,5 +1,5 @@
 fastapi
-uvicorn
+uvicorn[standard]
 sqlalchemy
 pydantic
 python-multipart
@@ -10,3 +10,6 @@ google-generativeai
 PyPDF2
 google-auth
 requests
+httpx
+psycopg2-binary
+aiofiles

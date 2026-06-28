@@ -5,8 +5,15 @@ from io import BytesIO
 from pydantic import BaseModel
 import json
 
-# Configure Gemini (you would set GEMINI_API_KEY in your .env)
-genai.configure(api_key=os.getenv("GEMINI_API_KEY", "YOUR_API_KEY_HERE"))
+# Configure Gemini — GEMINI_API_KEY must be set in Render's environment variables.
+# The server will raise a clear error at startup if the key is missing.
+_gemini_api_key = os.getenv("GEMINI_API_KEY")
+if not _gemini_api_key:
+    raise RuntimeError(
+        "GEMINI_API_KEY environment variable is not set. "
+        "Go to Render Dashboard → your service → Environment → Add GEMINI_API_KEY."
+    )
+genai.configure(api_key=_gemini_api_key)
 
 # Define the expected JSON structure using a Pydantic-like approach for prompt instructions
 system_instruction = """
